@@ -396,3 +396,7 @@
 	"begin_code.h"
 	"close_code.h"
 
+1694998646 source:c:\users\pineda walter\documents\juego lab2\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+	<iostream>
+	<SDL2/SDL.h>
+

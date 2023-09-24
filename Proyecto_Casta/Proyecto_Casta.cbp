@@ -31,7 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../Motor_SDL_Files/SDL2-devel-2.28.3-mingw/SDL2-2.28.3/i686-w64-mingw32/include" />
 		</Compiler>
+		<Linker>
+			<Add option="-imingw32 -ISDL2main -ISDL" />
+			<Add directory="../Motor_SDL_Files/SDL2-devel-2.28.3-mingw/SDL2-2.28.3/i686-w64-mingw32/lib" />
+		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
