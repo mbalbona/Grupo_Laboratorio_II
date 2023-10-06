@@ -32,6 +32,14 @@ bool Game::run()
         return false;
     }
 
+
+
+    int x, y ,w, h;                                     ///X = EJE X
+                                                        ///Y = EJE Y
+                                                        ///W = WIDHT (LARGO)
+                                                        ///H = HEIGHT (ANCHO)
+
+
     SDL_Event event_handler;                            ///DECLARAMOS MANAGER DE EVENTOS
     bool estaAndando = true;                            ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
@@ -44,7 +52,13 @@ bool Game::run()
                 break;
             }
 
+
         }
+
+        ///SDL_GetWindowPosition(window, &x, &y);       CAPTURA LA POSICION DE LA VENTANA EN LA PANTALLA
+
+        ///cout<< x <<" | "<< y <<endl;
+
 
 
     }

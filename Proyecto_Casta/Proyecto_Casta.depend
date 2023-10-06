@@ -1594,9 +1594,9 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596456 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
+1696597556 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
-1696596604 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+1696597302 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
 	<SDL2/SDL.h>
 	"Game.h"
