@@ -8,7 +8,9 @@ class Game
 
         Game();
 
+        void limitar_fps(Uint32);
         bool run();
+
 
 
 
