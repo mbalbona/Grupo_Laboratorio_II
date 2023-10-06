@@ -9,13 +9,9 @@ class Game
         Game();
 
         void limitar_fps(Uint32);
-        bool run();
+        void init();
 
-
-
-
-    protected:
-
-
+    private:
+        Uint32 reloj_fps;
 };
 

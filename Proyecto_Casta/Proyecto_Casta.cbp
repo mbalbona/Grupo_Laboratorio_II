@@ -19,6 +19,7 @@
 					<Add option="-g" />
 					<Add directory="Clases/MotorJuego" />
 					<Add directory="SDL2/include" />
+					<Add directory="Clases/RenderizadoVentana" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main -lSDL2" />
@@ -33,6 +34,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="Clases/MotorJuego" />
+					<Add directory="Clases/RenderizadoVentana" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -51,6 +53,8 @@
 		</Linker>
 		<Unit filename="Clases/MotorJuego/Game.cpp" />
 		<Unit filename="Clases/MotorJuego/Game.h" />
+		<Unit filename="Clases/RenderizadoVentana/RendererWindow.cpp" />
+		<Unit filename="Clases/RenderizadoVentana/RendererWindow.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -25,29 +25,10 @@ void Game::limitar_fps(Uint32 reloj_fps){
 }
 
 
-bool Game::run()
+void Game::init()
 {
 
     SDL_Init(SDL_INIT_EVERYTHING);                     ///INICIAMOS SDL
-
-    SDL_Window *window;
-
-    window = SDL_CreateWindow("Testing",               ///CREACION DE VENTANA
-                                SDL_WINDOWPOS_CENTERED,///Posicion de la ventana en eje X
-                                SDL_WINDOWPOS_CENTERED,///Posicion de la ventana en eje Y
-                                largo_ventana,         ///Largo
-                                ancho_ventana,         ///Ancho
-                                SDL_WINDOW_RESIZABLE   ///Comportamiento de la ventana
-                                );
-
-    if(window == nullptr){
-        cout<<"ERROR! NO SE INIICALIZO CORRECTAMENTE LA VENTANA!"<<endl;
-        cout<<"Error: "<<SDL_GetError();
-        system("pause");
-        return false;
-    }
-
-
 
     int x, y ,w, h;                                                         ///X = EJE X
                                                                             ///Y = EJE Y
@@ -59,7 +40,7 @@ bool Game::run()
     SDL_Event event_handler;                                                ///DECLARAMOS MANAGER DE EVENTOS
     bool estaAndando = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
-    Uint32 reloj_fps;                                                       ///VARIABLE ALMACENADORA DE LOS FRAMES POR SEGUNDO
+
 
     while(estaAndando){                                                     ///LOOP O CICLO PRINCIPAL
 
@@ -75,7 +56,7 @@ bool Game::run()
 
         limitar_fps(reloj_fps);                                             ///LIMITA EL RELOJ DE FPS
 
-        SDL_UpdateWindowSurface(window);                                    ///ACTUALIZA LA PANTALLA MIENTRAS ESTA CORRIENDO EL JUEGO
+        ///SDL_UpdateWindowSurface(window);                                    ///ACTUALIZA LA PANTALLA MIENTRAS ESTA CORRIENDO EL JUEGO
 
         ///SDL_GetWindowPosition(window, &x, &y);                           CAPTURA LA POSICION DE LA VENTANA EN LA PANTALLA
 
@@ -86,10 +67,9 @@ bool Game::run()
     }
 
 
-    SDL_DestroyWindow(window);                         ///Destruye ventana
+    ///SDL_DestroyWindow(window);                         ///Destruye ventana
 
     SDL_Quit();
-
-    return true;
 }
+
 

@@ -7,7 +7,7 @@ using namespace std;
 
 /**
 Enlace de documentacion de SDL2 https://wiki.libsdl.org/SDL2/APIByCategory
-en este enlace se encuentras todas las formas de uso de SDL, funciones, archivos.h y sus contenidos,
+en este enlace se encuentran todas las formas de uso de SDL, funciones, archivos.h y sus contenidos,
 formas de uso, syntaxis, etc.
 
 Consultar en caso de necesitar una ayuda extra ademas de videos explicativos,
@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 
     Game test;
 
-    test.run();
+    test.init();
 
     return EXIT_SUCCESS;
 }
