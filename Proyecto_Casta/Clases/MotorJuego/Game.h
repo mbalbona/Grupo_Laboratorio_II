@@ -1,10 +1,16 @@
 #pragma once
 
+using namespace std;
+
 class Game
 {
     public:
         Game();
-        ~Game();
+
+        bool run();
+
+        void render();
+
 
     protected:
 
