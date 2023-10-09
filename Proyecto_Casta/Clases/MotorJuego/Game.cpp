@@ -17,8 +17,8 @@ Game::Game()
 
 void Game::limitar_fps(Uint32 reloj_fps){
 
-    if( (1000 / fps) > SDL_GetTicks() - reloj_fps ){            /// Si el tiempo transcurrido desde el último frame es menor que el tiempo de frame,
-        SDL_Delay( 1000 / fps - ( SDL_GetTicks() - reloj_fps) );/// espera hasta que pase el tiempo suficiente.
+    if( (1000 / fps) > SDL_GetTicks() - reloj_fps ){                        /// Si el tiempo transcurrido desde el último frame es menor que el tiempo de frame,
+        SDL_Delay( 1000 / fps - ( SDL_GetTicks() - reloj_fps) );            /// espera hasta que pase el tiempo suficiente.
     }
 
     cout<< reloj_fps << endl;
@@ -28,7 +28,7 @@ void Game::limitar_fps(Uint32 reloj_fps){
 void Game::init()
 {
 
-    SDL_Init(SDL_INIT_EVERYTHING);                     ///INICIAMOS SDL
+    SDL_Init(SDL_INIT_EVERYTHING);                                          ///INICIAMOS SDL
 
     int x, y ,w, h;                                                         ///X = EJE X
                                                                             ///Y = EJE Y
