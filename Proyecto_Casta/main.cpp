@@ -1,9 +1,12 @@
 #include <iostream>
-#include <SDL2/SDL.h>
+#include "SDL.h"
+#include <SDL2/SDL_image.h>
 
 using namespace std;
 
+#include "RendererWindow.h"
 #include "Game.h"
+
 
 /**
 Enlace de documentacion de SDL2 https://wiki.libsdl.org/SDL2/APIByCategory
@@ -17,9 +20,9 @@ del codigo fuente del actual programa.
 int main(int argc, char* argv[])
 {
 
-    Game test;
+        Game test;
 
-    test.init();
+        test.init();
 
     return EXIT_SUCCESS;
 }

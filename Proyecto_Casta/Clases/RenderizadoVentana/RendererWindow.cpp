@@ -1,12 +1,18 @@
 #include <iostream>
-#include <SDL2/SDL.h>
+#include "SDL.h"
+#include <SDL2/SDL_image.h>
 #include "RendererWindow.h"
+#define fps 120                                        ///#define es una directiva del preprocesador que permite definir constantes y macros.
 
 using namespace std;
+
 
 RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
     : window(nullptr), renderer(nullptr)                    ///INICIALIZAMOS LOS MIEMBROS WINDOW Y RENDER EN NULL
 {
+
+
+
     window = SDL_CreateWindow(titulo,                       ///CREACION DE VENTANA
                                 SDL_WINDOWPOS_UNDEFINED,    ///Posicion de la ventana en eje X
                                 SDL_WINDOWPOS_UNDEFINED,    ///Posicion de la ventana en eje Y
@@ -21,3 +27,22 @@ RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
 
     if( renderer == nullptr ) cout << "EL RENDERIZADOR FALLO EN INICIALIZARSE! Error: " << SDL_GetError() <<endl;
 }
+
+SDL_Texture* RendererWindow::cargar_textura(const char *direccion_archivo)
+{
+    SDL_Texture *texture = nullptr;
+
+    texture = IMG_LoadTexture(renderer, direccion_archivo);
+
+    if(texture == nullptr) cout << "FALLO EN CARGAR TEXTURA! ERROR: " << SDL_GetError() << endl;
+
+    return texture;
+}
+
+
+void RendererWindow::limpiar()
+{
+    SDL_DestroyWindow(window);
+}
+
+

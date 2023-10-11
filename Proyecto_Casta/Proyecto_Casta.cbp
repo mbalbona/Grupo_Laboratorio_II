@@ -20,10 +20,12 @@
 					<Add directory="Clases/MotorJuego" />
 					<Add directory="SDL2/include" />
 					<Add directory="Clases/RenderizadoVentana" />
+					<Add directory="SDL2/Imagen/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-lmingw32 -lSDL2main -lSDL2" />
+					<Add option="-lmingw32 -lSDL2main  -lSDL2 -lSDL2_image" />
 					<Add directory="SDL2/lib" />
+					<Add directory="SDL2/Imagen/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -45,11 +47,13 @@
 			<Add option="-Wall" />
 			<Add option="-std=c++14" />
 			<Add option="-fexceptions" />
-			<Add directory="SDL2/include" />
+			<Add directory="SDL2/include/SDL2" />
+			<Add directory="SDL2/Imagen/include/SDL2" />
 		</Compiler>
 		<Linker>
-			<Add option="-lmingw32 -lSDL2main -lSDL2" />
+			<Add option="-lmingw32 -lSDL2main  -lSDL2 -lSDL2_image" />
 			<Add directory="SDL2/lib" />
+			<Add directory="SDL2/Imagen/lib" />
 		</Linker>
 		<Unit filename="Clases/MotorJuego/Game.cpp" />
 		<Unit filename="Clases/MotorJuego/Game.h" />
