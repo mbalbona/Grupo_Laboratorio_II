@@ -18,6 +18,9 @@ void Game::init()
     RendererWindow window("test", ancho_ventana, largo_ventana);
 
     SDL_Event event_handler;                                                ///DECLARAMOS MANAGER DE EVENTOS
+
+    SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
+
     bool estaAndando = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
     while(estaAndando){                                                     ///LOOP O CICLO PRINCIPAL
@@ -27,6 +30,9 @@ void Game::init()
             if(event_handler.type == SDL_QUIT) estaAndando = false;                             ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
                                                                                                 ///ESTE FINALIZARA
         }
+        window.vaciar();
+        window.renderizar(nivel_1);
+        window.mostrar();
 
 
     }

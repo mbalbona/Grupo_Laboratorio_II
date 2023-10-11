@@ -21,6 +21,7 @@
 					<Add directory="SDL2/include" />
 					<Add directory="Clases/RenderizadoVentana" />
 					<Add directory="SDL2/Imagen/include" />
+					<Add directory="Clases/Entidad" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main  -lSDL2 -lSDL2_image" />
@@ -37,6 +38,7 @@
 					<Add option="-O2" />
 					<Add directory="Clases/MotorJuego" />
 					<Add directory="Clases/RenderizadoVentana" />
+					<Add directory="Clases/Entidad" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -55,6 +57,8 @@
 			<Add directory="SDL2/lib" />
 			<Add directory="SDL2/Imagen/lib" />
 		</Linker>
+		<Unit filename="Clases/Entidad/Entidad.cpp" />
+		<Unit filename="Clases/Entidad/Entidad.h" />
 		<Unit filename="Clases/MotorJuego/Game.cpp" />
 		<Unit filename="Clases/MotorJuego/Game.h" />
 		<Unit filename="Clases/RenderizadoVentana/RendererWindow.cpp" />

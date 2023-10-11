@@ -400,9 +400,11 @@
 	<iostream>
 	<SDL2/SDL.h>
 
-1696561081 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+1697061751 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
-	<SDL2/SDL.h>
+	"SDL.h"
+	<SDL2/SDL_image.h>
+	"RendererWindow.h"
 	"Game.h"
 
 1695779930 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\sdl.h
@@ -798,10 +800,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1695784199 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+1697064022 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+	<iostream>
+	"SDL.h"
+	<SDL2/SDL_image.h>
+	"RendererWindow.h"
 	"Game.h"
 
-1696561124 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
+1697061751 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
 1693592917 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -2029,4 +2035,18 @@
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
+
+1697061751 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\imagen\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1697064349 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+
+1697064942 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
+	<iostream>
+	"SDL.h"
+	<SDL2/SDL_image.h>
+	"RendererWindow.h"
 
