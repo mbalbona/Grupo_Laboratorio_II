@@ -24,6 +24,7 @@ void Game::init()
     SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
 
     Entidad plataforma_nivel_1(100, 300, nivel_1);
+    Entidad jugador_1()
 
     bool estaAndando = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
