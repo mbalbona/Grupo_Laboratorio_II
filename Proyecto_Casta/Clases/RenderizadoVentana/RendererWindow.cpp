@@ -8,7 +8,10 @@ using namespace std;
 
 
 RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
-    : window(nullptr), renderer(nullptr)                    ///INICIALIZAMOS LOS MIEMBROS WINDOW Y RENDER EN NULL
+    : window(nullptr), renderer(nullptr)                    ///LISTA DE INICIALIZACION DE MIEMBROS:
+                                                            ///PERMITE INICIALIZAR LOS MIEMBROS DE UNA CLASE EN EL CONSTRUCTOR DE LA CLASE.
+                                                            ///LA LISTA DE INICIALIZACION DE MIEMBROS SE ESPECIFICA DESPUES DE LA LISTA DE PARAMETROS DEL CONSTRUCTOR,
+                                                            ///Y ESTA COMPUESTA POR UNA LISTA DE INICIALIZADORES PARA LOS MIEMBROS DE LA CLASE, SEPARADOS POR COMAS.
 {
 
 
@@ -30,13 +33,14 @@ RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
 
 SDL_Texture* RendererWindow::cargar_textura(const char *direccion_archivo)
 {
-    SDL_Texture *texture = nullptr;
+    SDL_Texture *texture = nullptr;                                     ///INICIALIZAMOS LA VARIABLE EN NULA PARA PODER IDENTIFICAR FACILMENTE SI HUBO ALGUN FALLO AL CARGAR
+                                                                        ///LA IMAGEN
 
-    texture = IMG_LoadTexture(renderer, direccion_archivo);
+    texture = IMG_LoadTexture(renderer, direccion_archivo);             ///CARGAMOS LA TEXTURA Y LA COLOCAMOS DENTRO DE LA VARIABLE texture
 
     if(texture == nullptr) cout << "FALLO EN CARGAR TEXTURA! ERROR: " << SDL_GetError() << endl;
 
-    return texture;
+    return texture;                                                     ///RETORNAMOS EL PUNTERO CONTENEDOR DE LA IMAGEN PARA TRABAJAR CON ELLA Y POSTERIORMENTE MOSTRARLA
 }
 
 

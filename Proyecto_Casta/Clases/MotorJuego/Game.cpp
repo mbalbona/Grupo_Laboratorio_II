@@ -30,7 +30,7 @@ void Game::init()
             if(event_handler.type == SDL_QUIT) estaAndando = false;                             ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
                                                                                                 ///ESTE FINALIZARA
         }
-        window.vaciar();
+        window.vaciar
         window.renderizar(nivel_1);
         window.mostrar();
 
