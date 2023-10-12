@@ -56,19 +56,8 @@ void RendererWindow::vaciar()
 
 void RendererWindow::renderizar(SDL_Texture *text)
 {
-    SDL_Rect src;
-    src.x = 0;
-    src.y = 0;
-    src.w = 1000;
-    src.h = 1000;
 
-    SDL_Rect dest;
-    dest.x = 500;
-    dest.y = 500;
-    dest.w = 32;
-    dest.h = 32;
-
-    SDL_RenderCopy(renderer, text, &src, &dest);
+    SDL_RenderCopy(renderer, text, nullptr, nullptr);
 }
 
 void RendererWindow::mostrar()

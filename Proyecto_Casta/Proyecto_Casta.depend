@@ -400,10 +400,11 @@
 	<iostream>
 	<SDL2/SDL.h>
 
-1697061751 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+1697069461 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
+	"Entidad.h"
 	"RendererWindow.h"
 	"Game.h"
 
@@ -800,14 +801,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1697064022 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+1697069518 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
 	"Game.h"
 
-1697061751 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
+1697065564 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
 1693592917 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -2042,11 +2043,23 @@
 	"begin_code.h"
 	"close_code.h"
 
-1697064349 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+1697065564 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
 
-1697064942 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
+1697069368 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
+
+1697069504 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
+	<iostream>
+	"Entidad.h"
+	"SDL.h"
+	<SDL2/SDL_image.h>
+
+1697069569 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.cpp
+	<iostream>
+	"Entidad.h"
+	"SDL.h"
+	<SDL2/SDL_image.h>
 

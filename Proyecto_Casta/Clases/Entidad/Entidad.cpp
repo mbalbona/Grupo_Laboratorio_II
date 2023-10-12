@@ -5,8 +5,8 @@
 
 using namespace std;
 
-Entidad::Entidad(float x, float y, SDL_Texture *textura)
-: this->x(nullptr), this->y(nullptr), tex(textura)
+Entidad::Entidad(float p_x, float p_y, SDL_Texture *textura)
+: x(p_x), y(p_y), tex(textura)
 {
     frame_actual.x = 0;
     frame_actual.y = 0;
