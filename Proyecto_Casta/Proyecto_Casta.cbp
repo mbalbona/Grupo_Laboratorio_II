@@ -61,6 +61,8 @@
 		<Unit filename="Clases/Entidad/Entidad.h" />
 		<Unit filename="Clases/MotorJuego/Game.cpp" />
 		<Unit filename="Clases/MotorJuego/Game.h" />
+		<Unit filename="Clases/Personaje/personaje.cpp" />
+		<Unit filename="Clases/Personaje/personaje.h" />
 		<Unit filename="Clases/RenderizadoVentana/RendererWindow.cpp" />
 		<Unit filename="Clases/RenderizadoVentana/RendererWindow.h" />
 		<Unit filename="main.cpp" />

@@ -31,12 +31,27 @@ void Game::init()
                                                                                                 ///ESTE FINALIZARA
         }
         window.vaciar();
-        window.renderizar(nivel_1);
+      window.renderizar(nivel_1);
         window.mostrar();
 
 
     }
+    SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
+      bool estaAndandopj1 = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
+    while(estaAndandopj1){                                                     ///LOOP O CICLO PRINCIPAL
+
+        while(SDL_PollEvent(&event_handler)){
+
+            if(event_handler.type == SDL_QUIT) estaAndandopj1 = false;                             ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
+                                                                                                ///ESTE FINALIZARA
+        }
+        window.vaciar();
+        window.renderizar(pj1);
+        window.mostrar();
+
+
+}
     window.limpiar();
     SDL_Quit();
 }
