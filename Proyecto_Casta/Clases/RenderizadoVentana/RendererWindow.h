@@ -1,6 +1,9 @@
-#ifndef RENDERERWINDOW_H
-#define RENDERERWINDOW_H
+#pragma once
+#include <iostream>
+#include "SDL.h"
+#include <SDL2/SDL_image.h>
 
+#include "Entidad.h"
 
 /**
 CLASE RENDERERWINDOW
@@ -14,7 +17,7 @@ class RendererWindow
         RendererWindow(const char *titulo, int largo, int ancho);       ///CONSTRUCTOR QUE TOMA COMO PARAMETRO UN TITULO Y LAS DIMENSIONES DESEADAS
         SDL_Texture *cargar_textura(const char *);                      ///FUNCION ENCARGADA DE CARGAR LAS TEXTURAS/IMAGENES QUE IMPLEMENTAREMOS
         void vaciar();                                                  ///VACIA EL BUFER DE RENDERIZADO DE LA VENTANA
-        void renderizar(SDL_Texture *);                                 ///RENDERIZA LAS TEXTURAS COLOCADAS, RECIBIENDO UN PUNTERO QUE CONTIENE LA DIRECCION DE LA IMAGEN
+        void renderizar(Entidad &);                                     ///RENDERIZA LAS TEXTURAS COLOCADAS, RECIBIENDO UNA REFERENCIA QUE CONTIENE LA DIRECCION DE LA IMAGEN
         void mostrar();                                                 ///MUESTRAN LA IMAGEN
         void limpiar();                                                 ///LIBERA LOS RECURSOS UTILIZADO AL FINALIZAR EL PROGRAMA, ES DECIR LA MEMORIA UTILIZADA POR LA VENTANA.
     private:
@@ -22,4 +25,4 @@ class RendererWindow
         SDL_Renderer *renderer;     ///VARIABLE ALMACENADORA DE RENDERIZAR LA VENTANA
 };
 
-#endif // RENDERERWINDOW_H
+

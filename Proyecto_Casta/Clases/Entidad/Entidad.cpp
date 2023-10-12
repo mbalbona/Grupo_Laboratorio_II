@@ -13,5 +13,4 @@ Entidad::Entidad(float p_x, float p_y, SDL_Texture *textura)
     frame_actual.w = 256;
     frame_actual.h = 240;
 
-
 }

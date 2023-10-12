@@ -16,6 +16,11 @@ class Entidad
     public:
         Entidad(float, float, SDL_Texture *);
 
+        ///GETTERS
+        float getX(void){return x;}
+        float getY(void){return y;}
+        SDL_Texture *getTextura(void){return tex;}
+        SDL_Rect getFrameActual(void){return frame_actual;}
     private:
         float x, y;
         SDL_Rect frame_actual;

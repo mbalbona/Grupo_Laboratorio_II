@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include <SDL2/SDL_image.h>
 #include "RendererWindow.h"
+#include "Entidad.h"
 #define fps 120                                        ///#define es una directiva del preprocesador que permite definir constantes y macros.
 
 using namespace std;
@@ -54,10 +55,21 @@ void RendererWindow::vaciar()
     SDL_RenderClear(renderer);
 }
 
-void RendererWindow::renderizar(SDL_Texture *text)
+void RendererWindow::renderizar(Entidad &entid)
 {
+    SDL_Rect src;
+    src.x = entid.getFrameActual().x;
+    src.y = entid.getFrameActual().y;
+    src.w = entid.getFrameActual().w;
+    src.h = entid.getFrameActual().h;
 
-    SDL_RenderCopy(renderer, text, nullptr, nullptr);
+    SDL_Rect dest;
+    dest.x = entid.getX() * 4;
+    dest.y = entid.getY() * 4;
+    dest.w = entid.getFrameActual().w * 4;
+    dest.h = entid.getFrameActual().h * 4;
+
+    SDL_RenderCopy(renderer, entid.getTextura(), nullptr, nullptr);
 }
 
 void RendererWindow::mostrar()

@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include <SDL2/SDL_image.h>
 #include "RendererWindow.h"
+#include "Entidad.h"
 #include "Game.h"
 
 #define ancho_ventana 1280                              ///Constante es un valor que no puede cambiar durante la ejecución del programa.
@@ -20,6 +21,9 @@ void Game::init()
     SDL_Event event_handler;                                                ///DECLARAMOS MANAGER DE EVENTOS
 
     SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
+    SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
+
+    Entidad plataforma_nivel_1(100, 300, nivel_1);
 
     bool estaAndando = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
@@ -30,16 +34,18 @@ void Game::init()
             if(event_handler.type == SDL_QUIT) estaAndando = false;                             ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
                                                                                                 ///ESTE FINALIZARA
         }
+
         window.vaciar();
-      window.renderizar(nivel_1);
+        window.renderizar(plataforma_nivel_1);
         window.mostrar();
 
 
     }
-    SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
-      bool estaAndandopj1 = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
-    while(estaAndandopj1){                                                     ///LOOP O CICLO PRINCIPAL
+
+    bool estaAndandopj1 = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
+
+    /*while(estaAndandopj1){                                                     ///LOOP O CICLO PRINCIPAL
 
         while(SDL_PollEvent(&event_handler)){
 
@@ -49,9 +55,9 @@ void Game::init()
         window.vaciar();
         window.renderizar(pj1);
         window.mostrar();
+    }
+        */
 
-
-}
     window.limpiar();
     SDL_Quit();
 }
