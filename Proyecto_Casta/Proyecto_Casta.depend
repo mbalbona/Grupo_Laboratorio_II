@@ -400,10 +400,11 @@
 	<iostream>
 	<SDL2/SDL.h>
 
-1697069461 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+1697766121 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
+	<vector>
 	"Entidad.h"
 	"RendererWindow.h"
 	"Game.h"
@@ -801,11 +802,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1697069518 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+1697756720 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
+	"Entidad.h"
 	"Game.h"
 
 1697065564 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
@@ -2055,21 +2057,26 @@
 	"begin_code.h"
 	"close_code.h"
 
-1697065564 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+1697756155 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+	<iostream>
+	"SDL.h"
+	<SDL2/SDL_image.h>
+	"Entidad.h"
 
-1697069368 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
+1697756802 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
+	"Entidad.h"
 
-1697069504 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
+1697756428 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
 	<iostream>
 	"Entidad.h"
 	"SDL.h"
 	<SDL2/SDL_image.h>
 
-1697069569 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.cpp
+1697756853 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.cpp
 	<iostream>
 	"Entidad.h"
 	"SDL.h"
@@ -2546,4 +2553,13 @@
 	"Entidad.h"
 	"SDL.h"
 	<SDL2/SDL_image.h>
+
+1697754539 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.cpp
+	<ctime>
+	<iostream>
+	"personaje.h"
+
+1697754539 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
+	<iostream>
+	<string>
 

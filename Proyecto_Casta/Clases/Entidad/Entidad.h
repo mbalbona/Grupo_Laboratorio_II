@@ -25,6 +25,7 @@ class Entidad
         float x, y;
         SDL_Rect frame_actual;
         SDL_Texture *tex;
+
 };
 
 

@@ -20,6 +20,7 @@ class RendererWindow
         void renderizar(Entidad &);                                     ///RENDERIZA LAS TEXTURAS COLOCADAS, RECIBIENDO UNA REFERENCIA QUE CONTIENE LA DIRECCION DE LA IMAGEN
         void mostrar();                                                 ///MUESTRAN LA IMAGEN
         void limpiar();                                                 ///LIBERA LOS RECURSOS UTILIZADO AL FINALIZAR EL PROGRAMA, ES DECIR LA MEMORIA UTILIZADA POR LA VENTANA.
+
     private:
         SDL_Window *window;         ///VARIABLE CONTROLADORA DE LAS PROPIEDADES DE LAS VENTANAS
         SDL_Renderer *renderer;     ///VARIABLE ALMACENADORA DE RENDERIZAR LA VENTANA

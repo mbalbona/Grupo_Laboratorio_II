@@ -64,12 +64,12 @@ void RendererWindow::renderizar(Entidad &entid)
     src.h = entid.getFrameActual().h;
 
     SDL_Rect dest;
-    dest.x = entid.getX() * 4;
-    dest.y = entid.getY() * 4;
-    dest.w = entid.getFrameActual().w * 4;
-    dest.h = entid.getFrameActual().h * 4;
+    dest.x = entid.getX();
+    dest.y = entid.getY();
+    dest.w = entid.getFrameActual().w;
+    dest.h = entid.getFrameActual().h;
 
-    SDL_RenderCopy(renderer, entid.getTextura(), nullptr, nullptr);
+    SDL_RenderCopy(renderer, entid.getTextura(), &src, &dest);
 }
 
 void RendererWindow::mostrar()
