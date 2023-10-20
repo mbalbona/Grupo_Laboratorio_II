@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
+#include <SDL2/SDL_image.h>
 #include "Entidad.h"
 #include "SDL.h"
-#include <SDL2/SDL_image.h>
+#include "Calculos.h"
 
 /**
 CLASE ENTIDAD
@@ -14,15 +15,14 @@ LO QUE SIGNIFICA  QUE NO SE PUEDE INSTANCIAR DIRECTAMENTE. PARA CREAR UNA ENTIDA
 class Entidad
 {
     public:
-        Entidad(float, float, SDL_Texture *);
+        Entidad(Vector, SDL_Texture *);
 
         ///GETTERS
-        float getX(void){return x;}
-        float getY(void){return y;}
+        Vector &getPos(){return pos;}
         SDL_Texture *getTextura(void){return tex;}
         SDL_Rect getFrameActual(void){return frame_actual;}
     private:
-        float x, y;
+        Vector pos;
         SDL_Rect frame_actual;
         SDL_Texture *tex;
 

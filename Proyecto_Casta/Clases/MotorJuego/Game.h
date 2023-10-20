@@ -11,10 +11,8 @@ CLASE CONTENEDORA DEL MOTOR DE JUEGO PRINCIPAL Y DONDE ESTA UBICADO EL LOOP PRIN
 class Game
 {
 public:
-
     void init();
 
 private:
-    Uint32 reloj_fps;
 };
 
