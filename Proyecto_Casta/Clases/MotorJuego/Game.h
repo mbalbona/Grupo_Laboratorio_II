@@ -11,8 +11,12 @@ CLASE CONTENEDORA DEL MOTOR DE JUEGO PRINCIPAL Y DONDE ESTA UBICADO EL LOOP PRIN
 class Game
 {
 public:
-    void init();
+    Game();
+    ~Game();
+    void Run();
+
 
 private:
+    vector<Entidad> entities;
 };
 

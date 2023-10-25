@@ -32,11 +32,6 @@ RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
 }
 
 
-
-
-
-
-
 SDL_Texture* RendererWindow::cargar_textura(const char *direccion_archivo)
 {
     SDL_Texture *texture = nullptr;                                     ///INICIALIZAMOS LA VARIABLE EN NULA PARA PODER IDENTIFICAR FACILMENTE SI HUBO ALGUN FALLO AL CARGAR
