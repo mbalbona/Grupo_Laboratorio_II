@@ -14,11 +14,3 @@ void Vector::mostrar()
 {
     std::cout<< x << " " << y << std::endl;
 }
-
-float tiempoEnSegundos()
-{
-    float t = SDL_GetTicks();
-    t *= 0.001f;
-
-    return t;
-}

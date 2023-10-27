@@ -24,7 +24,7 @@ Game::Game()
 
 Game::~Game()
 {
-    SDL_Quit();                                                             ///CERRAMOS JUEGO
+    SDL_Quit();                                                                             ///CERRAMOS JUEGO
 }
 
 void Game::Run()
@@ -36,6 +36,9 @@ void Game::Run()
     SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");                   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
     SDL_Texture *pj1 = window.cargar_textura("Graficos/Personajes/MILEI/milei.png");
     SDL_Texture *enemigo1 = window.cargar_textura("Graficos/Personajes/Pato/patof.png");
+
+    int x = 0;                                                                              ///DECLARAMOS VARIABLE PARA MOVER PERSONAJE EN EL EJE X
+    int y = 0;                                                                              ///DECLARAMOS VARIABLE PARA MOVER PERSONAJE EN EL EJE Y
 
     vector<Entidad> entidades = {Entidad(Vector(100, 100), nivel_1),                        ///DECLARAMOS VECTOR CON FUNCIONALIDADES DINAMICAS DE ENTIDADES
                                  Entidad(Vector(400, 400), pj1),                            ///UTILIZANDO LA LIBRERIA VECTOR DE C++
@@ -60,14 +63,16 @@ void Game::Run()
         }
 
         window.mostrar();                                                   ///MUESTRA LA TEXTURA CARGADA
+
         ultimo_frame = limit_frames(60, ultimo_frame);                      ///LIMITAMOS FRAMES
-        cout << ultimo_frame << endl;
+        //cout << ultimo_frame << endl;
     }
+
     window.limpiar();                                                       ///LIMPIAMOS LA MEMORIA USADA POR LAS TEXTURAS
 }
 
 
-Uint32 limit_frames(double fps, Uint32 ultimo_frame) {
+Uint32 limit_frames(double target_fps, Uint32 ultimo_frame) {
   /// Obtenemos el tiempo actual
   Uint32 ahora = SDL_GetTicks();
 
@@ -75,8 +80,8 @@ Uint32 limit_frames(double fps, Uint32 ultimo_frame) {
   Uint32 tiempo_transcurrido = ahora - ultimo_frame;
 
   /// Si el tiempo transcurrido es inferior al objetivo, esperamos
-  if (tiempo_transcurrido < (1000 / fps)) {
-    SDL_Delay((1000 / target_fps) - fps);
+  if (tiempo_transcurrido < (1000 / target_fps)) {
+    SDL_Delay((1000 / target_fps) - target_fps);
   }
 
   /// Actualizamos el tiempo del último frame

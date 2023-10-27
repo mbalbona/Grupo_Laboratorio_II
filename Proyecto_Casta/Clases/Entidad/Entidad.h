@@ -21,6 +21,7 @@ class Entidad
         Vector &getPos(){return pos;}
         SDL_Texture *getTextura(void){return tex;}
         SDL_Rect getFrameActual(void){return frame_actual;}
+
     private:
         Vector pos;
         SDL_Rect frame_actual;
