@@ -13,10 +13,13 @@ class Game
 public:
     Game();
     ~Game();
+
+    void handleEvents();
+    void render(RendererWindow window, vector<Entidad> entidades);
     void Run();
 
 
 private:
-    vector<Entidad> entities;
+    bool estaAndando;
 };
 

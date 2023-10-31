@@ -16,6 +16,8 @@ Uint32 limit_frames(double target_fps, Uint32 ultimo_frame);
 
 Game::Game()
 {
+    estaAndando = true;
+
     if(SDL_Init(SDL_INIT_EVERYTHING < 0))
        {
             cout << "ERROR AL INICIAR SDL2: " << SDL_GetError() << endl;                    ///INICIAMOS SDL
@@ -27,12 +29,35 @@ Game::~Game()
     SDL_Quit();                                                                             ///CERRAMOS JUEGO
 }
 
+void Game::render(RendererWindow window, vector<Entidad> entidades)
+{
+    window.vaciar();                                                    ///LIMPIAMOS FRAMES RESIDUALES
+
+    for(Entidad &i : entidades){                                        ///DECLARAMOS CICLO FOR BASADO EN RANGOS
+                                                                        ///CICLO FOR QUE SE UTILIZA PARA ITERAR SOBRE UNA SECUENCIA DE ELEMENTOS.
+        window.renderizar(i);                                           ///DIBUJA LAS TEXTURAS
+    }
+
+    window.mostrar();                                                   ///MUESTRA LA TEXTURA CARGADA
+}
+
+void Game::handleEvents()
+{
+    SDL_Event event_handler;                                            ///DECLARAMOS MANAGER DE EVENTOS
+    if(SDL_PollEvent(&event_handler)){                                  ///PROCESAMOS LOS EVENTOS
+            switch(event_handler.type){
+                case SDL_QUIT:                                          ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
+                    estaAndando = false;                                ///ESTE FINALIZARA
+            }
+        }
+}
+
+
 void Game::Run()
 {
 
     RendererWindow window("test", ancho_ventana, largo_ventana);                            ///CREAMOS UNA VENTANA
 
-    SDL_Event event_handler;                                                                ///DECLARAMOS MANAGER DE EVENTOS
     SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");                   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
     SDL_Texture *pj1 = window.cargar_textura("Graficos/Personajes/MILEI/milei.png");
     SDL_Texture *enemigo1 = window.cargar_textura("Graficos/Personajes/Pato/patof.png");
@@ -44,29 +69,19 @@ void Game::Run()
                                  Entidad(Vector(400, 400), pj1),                            ///UTILIZANDO LA LIBRERIA VECTOR DE C++
                                  Entidad(Vector(200, 200), enemigo1)};
 
-    bool estaAndando = true;
     Uint32 ultimo_frame = SDL_GetTicks();                                                  ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
     ///WHILE PRINCIPAL ACA ADENTRO SE CARGAN TODAS LAS TEXTURAS Y ENTIDADES QUE USAREMOS PARA LOS PERSONAJES ENEMIGOS Y NIVELES
 
-    while(estaAndando){                                                 ///LOOP O CICLO PRINCIPAL
-        while(SDL_PollEvent(&event_handler)){                           ///PROCESAMOS LOS EVENTOS
-            switch(event_handler.type){
-                case SDL_QUIT:                                          ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
-                    return;                                             ///ESTE FINALIZARA
-            }
-        }
+    while(estaAndando){                                                     ///LOOP O CICLO PRINCIPAL
 
-        for(Entidad &i : entidades){                                        ///DECLARAMOS CICLO FOR BASADO EN RANGOS
-                                                                            ///CICLO FOR QUE SE UTILIZA PARA ITERAR SOBRE UNA SECUENCIA DE ELEMENTOS.
-            window.renderizar(i);                                           ///DIBUJA LAS TEXTURAS
-        }
+        handleEvents();
 
-        window.mostrar();                                                   ///MUESTRA LA TEXTURA CARGADA
+        render(window, entidades);
 
-        ultimo_frame = limit_frames(60, ultimo_frame);                      ///LIMITAMOS FRAMES
-        //cout << ultimo_frame << endl;
     }
+
+    ///FIN CICLO JUEGO
 
     window.limpiar();                                                       ///LIMPIAMOS LA MEMORIA USADA POR LAS TEXTURAS
 }
@@ -86,6 +101,7 @@ Uint32 limit_frames(double target_fps, Uint32 ultimo_frame) {
 
   /// Actualizamos el tiempo del último frame
   ultimo_frame = ahora;
+
 
   return ultimo_frame;
 }

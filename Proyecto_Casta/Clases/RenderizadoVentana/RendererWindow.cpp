@@ -113,7 +113,7 @@ void RendererWindow::renderizar(Entidad &entid)
 
 void RendererWindow::mostrar()
 {
-    SDL_RenderPresent(renderer);
+    SDL_RenderPresent(renderer);                                    ///PINTAMOS LAS ANIMACIONES E IMAGENES EN NUESTRO CODIGO
 }
 
 

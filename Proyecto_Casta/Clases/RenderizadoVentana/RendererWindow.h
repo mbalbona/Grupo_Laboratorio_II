@@ -23,7 +23,6 @@ class RendererWindow
         void renderizar(Entidad &);                                     ///RENDERIZA LAS TEXTURAS COLOCADAS, RECIBIENDO UNA REFERENCIA QUE CONTIENE LA DIRECCION DE LA IMAGEN
         void mostrar();                                                 ///MUESTRAN LA IMAGEN
         void limpiar();                                                 ///LIBERA LOS RECURSOS UTILIZADO AL FINALIZAR EL PROGRAMA, ES DECIR LA MEMORIA UTILIZADA POR LA VENTANA.
-        //bool mover(vector<Entidad> *, );
 
 
     private:
