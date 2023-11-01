@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 #include <SDL2/SDL_image.h>
 #include "SDL.h"
 #include "RendererWindow.h"
@@ -12,33 +13,14 @@
 
 using namespace std;
 
-Uint32 limit_frames(double target_fps, Uint32 ultimo_frame);
-
 Game::Game()
 {
-    estaAndando = true;
+    isRunning = true;
 
     if(SDL_Init(SDL_INIT_EVERYTHING < 0))
        {
             cout << "ERROR AL INICIAR SDL2: " << SDL_GetError() << endl;                    ///INICIAMOS SDL
        }
-}
-
-Game::~Game()
-{
-    SDL_Quit();                                                                             ///CERRAMOS JUEGO
-}
-
-void Game::render(RendererWindow window, vector<Entidad> entidades)
-{
-    window.vaciar();                                                    ///LIMPIAMOS FRAMES RESIDUALES
-
-    for(Entidad &i : entidades){                                        ///DECLARAMOS CICLO FOR BASADO EN RANGOS
-                                                                        ///CICLO FOR QUE SE UTILIZA PARA ITERAR SOBRE UNA SECUENCIA DE ELEMENTOS.
-        window.renderizar(i);                                           ///DIBUJA LAS TEXTURAS
-    }
-
-    window.mostrar();                                                   ///MUESTRA LA TEXTURA CARGADA
 }
 
 void Game::handleEvents()
@@ -47,7 +29,7 @@ void Game::handleEvents()
     if(SDL_PollEvent(&event_handler)){                                  ///PROCESAMOS LOS EVENTOS
             switch(event_handler.type){
                 case SDL_QUIT:                                          ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
-                    estaAndando = false;                                ///ESTE FINALIZARA
+                    isRunning = false;                                ///ESTE FINALIZARA
             }
         }
 }
@@ -58,52 +40,39 @@ void Game::Run()
 
     RendererWindow window("test", ancho_ventana, largo_ventana);                            ///CREAMOS UNA VENTANA
 
-    SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");                   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
-    SDL_Texture *pj1 = window.cargar_textura("Graficos/Personajes/MILEI/milei.png");
-    SDL_Texture *enemigo1 = window.cargar_textura("Graficos/Personajes/Pato/patof.png");
-
-    int x = 0;                                                                              ///DECLARAMOS VARIABLE PARA MOVER PERSONAJE EN EL EJE X
-    int y = 0;                                                                              ///DECLARAMOS VARIABLE PARA MOVER PERSONAJE EN EL EJE Y
+    SDL_Texture *nivel_1 = window.loadTexture("Graficos/nivel_1.png");                   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
+    SDL_Texture *pj1 = window.loadTexture("Graficos/Personajes/MILEI/milei.png");
+    SDL_Texture *enemigo1 = window.loadTexture("Graficos/Personajes/Pato/patof.png");
 
     vector<Entidad> entidades = {Entidad(Vector(100, 100), nivel_1),                        ///DECLARAMOS VECTOR CON FUNCIONALIDADES DINAMICAS DE ENTIDADES
                                  Entidad(Vector(400, 400), pj1),                            ///UTILIZANDO LA LIBRERIA VECTOR DE C++
                                  Entidad(Vector(200, 200), enemigo1)};
 
-    Uint32 ultimo_frame = SDL_GetTicks();                                                  ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
+    auto ultimo_frame = SDL_GetTicks();
+
 
     ///WHILE PRINCIPAL ACA ADENTRO SE CARGAN TODAS LAS TEXTURAS Y ENTIDADES QUE USAREMOS PARA LOS PERSONAJES ENEMIGOS Y NIVELES
 
-    while(estaAndando){                                                     ///LOOP O CICLO PRINCIPAL
+    while(isRunning){                                                     ///LOOP O CICLO PRINCIPAL
+
+        auto frame_actual = SDL_GetTicks();
+        double segundos_transcurridos = frame_actual - ultimo_frame;
 
         handleEvents();
 
-        render(window, entidades);
+        window.update(segundos_transcurridos, entidades[0]);                ///ACTUALIZAMOS FRAMES
+
+        for(Entidad &i : entidades){                                        ///DECLARAMOS CICLO FOR BASADO EN RANGOS
+                                                                            ///CICLO FOR QUE SE UTILIZA PARA ITERAR SOBRE UNA SECUENCIA DE ELEMENTOS.
+            window.render(i);                                                ///DIBUJA LAS TEXTURAS
+        }
 
     }
 
     ///FIN CICLO JUEGO
 
-    window.limpiar();                                                       ///LIMPIAMOS LA MEMORIA USADA POR LAS TEXTURAS
+    window.release();                                                       ///LIMPIAMOS LA MEMORIA USADA POR LAS TEXTURAS
 }
 
-
-Uint32 limit_frames(double target_fps, Uint32 ultimo_frame) {
-  /// Obtenemos el tiempo actual
-  Uint32 ahora = SDL_GetTicks();
-
-  /// Calculamos el tiempo transcurrido desde el último frame
-  Uint32 tiempo_transcurrido = ahora - ultimo_frame;
-
-  /// Si el tiempo transcurrido es inferior al objetivo, esperamos
-  if (tiempo_transcurrido < (1000 / target_fps)) {
-    SDL_Delay((1000 / target_fps) - target_fps);
-  }
-
-  /// Actualizamos el tiempo del último frame
-  ultimo_frame = ahora;
-
-
-  return ultimo_frame;
-}
 
 

@@ -810,7 +810,7 @@
 	"Entidad.h"
 	"Game.h"
 
-1698713969 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
+1698793801 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
 1693592917 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -2059,20 +2059,21 @@
 	"begin_code.h"
 	"close_code.h"
 
-1698713578 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+1698797562 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
 	<iostream>
+	<vector>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"Entidad.h"
 
-1698713435 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
+1698797562 source:c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
 	"Entidad.h"
 
-1698706525 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
+1698797000 c:\users\mateo\desktop\proyecto_wam\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
 	<iostream>
 	<SDL2/SDL_image.h>
 	"Entidad.h"

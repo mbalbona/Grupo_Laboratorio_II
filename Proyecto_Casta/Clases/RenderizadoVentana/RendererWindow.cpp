@@ -32,12 +32,12 @@ RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
 }
 
 
-SDL_Texture* RendererWindow::cargar_textura(const char *direccion_archivo)
+SDL_Texture* RendererWindow::loadTexture(const char *file)
 {
     SDL_Texture *texture = nullptr;                                     ///INICIALIZAMOS LA VARIABLE EN NULA PARA PODER IDENTIFICAR FACILMENTE SI HUBO ALGUN FALLO AL CARGAR
                                                                         ///LA IMAGEN
 
-    texture = IMG_LoadTexture(renderer, direccion_archivo);             ///CARGAMOS LA TEXTURA Y LA COLOCAMOS DENTRO DE LA VARIABLE texture
+    texture = IMG_LoadTexture(renderer, file);             ///CARGAMOS LA TEXTURA Y LA COLOCAMOS DENTRO DE LA VARIABLE texture
 
     if(texture == nullptr) cout << "FALLO EN CARGAR TEXTURA! ERROR: " << SDL_GetError() << endl;
 
@@ -45,19 +45,13 @@ SDL_Texture* RendererWindow::cargar_textura(const char *direccion_archivo)
 }
 
 
-
-
-
-
-
-
-int RendererWindow::getTasaDeRefresco()
+int RendererWindow::getRefreshRate()
 {
-  int mostrarIndex = SDL_GetWindowDisplayIndex(window);
+  int displayIndex = SDL_GetWindowDisplayIndex(window);
 
   SDL_DisplayMode modo;
 
-  SDL_GetDisplayMode(mostrarIndex, 0, &modo);
+  SDL_GetDisplayMode(displayIndex, 0, &modo);
 
   // Verifica si la tasa de refresco es 0
 
@@ -72,50 +66,30 @@ int RendererWindow::getTasaDeRefresco()
 }
 
 
-
-
-void RendererWindow::limpiar()
+void RendererWindow::update(double elapsed_seconds, Entidad &entid)
 {
-    SDL_DestroyWindow(window);
+    frame_index = int( ( (SDL_GetTicks() / 100) % 10) );
+
+    entid.getPos().setX(frame_index * 587);
+
 }
 
 
 
 
-void RendererWindow::vaciar()
+void RendererWindow::render(Entidad &entid)
 {
     SDL_RenderClear(renderer);
-}
-
-
-
-
-void RendererWindow::renderizar(Entidad &entid)
-{
-    SDL_Rect src;
-    src.x = entid.getFrameActual().x;
-    src.y = entid.getFrameActual().y;
-    src.w = entid.getFrameActual().w;
-    src.h = entid.getFrameActual().h;
-
-    SDL_Rect dest;
-    dest.x = entid.getPos().getX();
-    dest.y = entid.getPos().getY();
-    dest.w = entid.getFrameActual().w;
-    dest.h = entid.getFrameActual().h;
-
-    SDL_RenderCopy(renderer, entid.getTextura(), &src, &dest);
-}
-
-
-
-
-
-void RendererWindow::mostrar()
-{
+    ///SDL_RenderCopy(renderer, entid.getTextura(), , entid.getPos().getX());
     SDL_RenderPresent(renderer);                                    ///PINTAMOS LAS ANIMACIONES E IMAGENES EN NUESTRO CODIGO
 }
 
+void RendererWindow::release()
+{
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+}
 
 
 

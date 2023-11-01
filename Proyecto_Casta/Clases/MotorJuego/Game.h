@@ -12,14 +12,12 @@ class Game
 {
 public:
     Game();
-    ~Game();
 
     void handleEvents();
-    void render(RendererWindow window, vector<Entidad> entidades);
     void Run();
 
 
 private:
-    bool estaAndando;
+    bool isRunning;   ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 };
 
