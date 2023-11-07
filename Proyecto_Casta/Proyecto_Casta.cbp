@@ -23,6 +23,7 @@
 					<Add directory="SDL2/Imagen/include" />
 					<Add directory="Clases/Entidad" />
 					<Add directory="Clases/Calculos" />
+					<Add directory="Clases/Texturas" />
 				</Compiler>
 				<Linker>
 					<Add option="-lmingw32 -lSDL2main  -lSDL2 -lSDL2_image" />
@@ -41,6 +42,7 @@
 					<Add directory="Clases/RenderizadoVentana" />
 					<Add directory="Clases/Entidad" />
 					<Add directory="Clases/Calculos" />
+					<Add directory="Clases/Texturas" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -69,6 +71,8 @@
 		<Unit filename="Clases/Personaje/personaje.h" />
 		<Unit filename="Clases/RenderizadoVentana/RendererWindow.cpp" />
 		<Unit filename="Clases/RenderizadoVentana/RendererWindow.h" />
+		<Unit filename="Clases/Texturas/Texture.cpp" />
+		<Unit filename="Clases/Texturas/Texture.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

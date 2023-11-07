@@ -9,7 +9,7 @@ using namespace std;
 
 
 RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
-: window(nullptr), renderer(nullptr)                        ///LISTA DE INICIALIZACION DE MIEMBROS:
+: window(nullptr)                        ///LISTA DE INICIALIZACION DE MIEMBROS:
                                                             ///PERMITE INICIALIZAR LOS MIEMBROS DE UNA CLASE EN EL CONSTRUCTOR DE LA CLASE.
                                                             ///LA LISTA DE INICIALIZACION DE MIEMBROS SE ESPECIFICA DESPUES DE LA LISTA DE PARAMETROS DEL CONSTRUCTOR,
                                                             ///Y ESTA COMPUESTA POR UNA LISTA DE INICIALIZADORES PARA LOS MIEMBROS DE LA CLASE, SEPARADOS POR COMAS.
@@ -26,23 +26,9 @@ RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
 
     if( window == nullptr ) cout << "LA VENTANA FALLO EN INICIALIZARSE! Error: " << SDL_GetError() <<endl;
 
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED); ///CREA EL RENDERIZADOR QUE UTILIZARA LA TARJETA GRAFICA QUE TENGA EL EQUIPO. EN CASO DE TENER.
-
-    if( renderer == nullptr ) cout << "EL RENDERIZADOR FALLO EN INICIALIZARSE! Error: " << SDL_GetError() <<endl;
 }
 
 
-SDL_Texture* RendererWindow::loadTexture(const char *file)
-{
-    SDL_Texture *texture = nullptr;                                     ///INICIALIZAMOS LA VARIABLE EN NULA PARA PODER IDENTIFICAR FACILMENTE SI HUBO ALGUN FALLO AL CARGAR
-                                                                        ///LA IMAGEN
-
-    texture = IMG_LoadTexture(renderer, file);             ///CARGAMOS LA TEXTURA Y LA COLOCAMOS DENTRO DE LA VARIABLE texture
-
-    if(texture == nullptr) cout << "FALLO EN CARGAR TEXTURA! ERROR: " << SDL_GetError() << endl;
-
-    return texture;                                                     ///RETORNAMOS EL PUNTERO CONTENEDOR DE LA IMAGEN PARA TRABAJAR CON ELLA Y POSTERIORMENTE MOSTRARLA
-}
 
 
 int RendererWindow::getRefreshRate()
@@ -66,7 +52,7 @@ int RendererWindow::getRefreshRate()
 }
 
 
-void RendererWindow::update(double elapsed_seconds, Entidad &entid)
+void RendererWindow::Update(double elapsed_seconds, Entidad &entid)
 {
     frame_index = int( ( (SDL_GetTicks() / 100) % 10) );
 
@@ -76,17 +62,8 @@ void RendererWindow::update(double elapsed_seconds, Entidad &entid)
 
 
 
-
-void RendererWindow::render(Entidad &entid)
+void RendererWindow::Release()
 {
-    SDL_RenderClear(renderer);
-    ///SDL_RenderCopy(renderer, entid.getTextura(), , entid.getPos().getX());
-    SDL_RenderPresent(renderer);                                    ///PINTAMOS LAS ANIMACIONES E IMAGENES EN NUESTRO CODIGO
-}
-
-void RendererWindow::release()
-{
-    SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
 }

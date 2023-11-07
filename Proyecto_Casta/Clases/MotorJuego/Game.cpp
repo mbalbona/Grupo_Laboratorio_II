@@ -15,7 +15,7 @@ using namespace std;
 
 Game::Game()
 {
-    isRunning = true;
+    _isRunning = true;
 
     if(SDL_Init(SDL_INIT_EVERYTHING < 0))
        {
@@ -29,7 +29,7 @@ void Game::handleEvents()
     if(SDL_PollEvent(&event_handler)){                                  ///PROCESAMOS LOS EVENTOS
             switch(event_handler.type){
                 case SDL_QUIT:                                          ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
-                    isRunning = false;                                ///ESTE FINALIZARA
+                    isRunning = false;                                  ///ESTE FINALIZARA
             }
         }
 }
@@ -38,41 +38,42 @@ void Game::handleEvents()
 void Game::Run()
 {
 
-    RendererWindow window("test", ancho_ventana, largo_ventana);                            ///CREAMOS UNA VENTANA
+    _window = new RendererWindow("Test", largo_ventana, ancho_ventana);                         ///CREAMOS UNA VENTANA
 
-    SDL_Texture *nivel_1 = window.loadTexture("Graficos/nivel_1.png");                   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
-    SDL_Texture *pj1 = window.loadTexture("Graficos/Personajes/MILEI/milei.png");
-    SDL_Texture *enemigo1 = window.loadTexture("Graficos/Personajes/Pato/patof.png");
+    _backgroundTexture = new Texture("Graficos/nivel_1.png");                                   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
 
-    vector<Entidad> entidades = {Entidad(Vector(100, 100), nivel_1),                        ///DECLARAMOS VECTOR CON FUNCIONALIDADES DINAMICAS DE ENTIDADES
-                                 Entidad(Vector(400, 400), pj1),                            ///UTILIZANDO LA LIBRERIA VECTOR DE C++
-                                 Entidad(Vector(200, 200), enemigo1)};
-
-    auto ultimo_frame = SDL_GetTicks();
+    auto ultimo_frame = std::chrono::system_clock::now();
 
 
     ///WHILE PRINCIPAL ACA ADENTRO SE CARGAN TODAS LAS TEXTURAS Y ENTIDADES QUE USAREMOS PARA LOS PERSONAJES ENEMIGOS Y NIVELES
 
-    while(isRunning){                                                     ///LOOP O CICLO PRINCIPAL
+    while(isRunning){                                                       ///LOOP O CICLO PRINCIPAL
 
-        auto frame_actual = SDL_GetTicks();
-        double segundos_transcurridos = frame_actual - ultimo_frame;
+        auto frame_actual = std::chrono::system_clock::now();
+
+        std::chrono::duration<double> segundos_transcurridos = frame_actual - ultimo_frame;
 
         handleEvents();
 
-        window.update(segundos_transcurridos, entidades[0]);                ///ACTUALIZAMOS FRAMES
+        cout << segundos_transcurridos << endl;
 
-        for(Entidad &i : entidades){                                        ///DECLARAMOS CICLO FOR BASADO EN RANGOS
-                                                                            ///CICLO FOR QUE SE UTILIZA PARA ITERAR SOBRE UNA SECUENCIA DE ELEMENTOS.
-            window.render(i);                                                ///DIBUJA LAS TEXTURAS
-        }
+        window.Update(segundos_transcurridos.count(), entidades[0]);        ///ACTUALIZAMOS FRAMES
 
+        Render(_window.getRenderer());
+
+        ultimo_frame = frame_actual;
     }
 
     ///FIN CICLO JUEGO
 
-    window.release();                                                       ///LIMPIAMOS LA MEMORIA USADA POR LAS TEXTURAS
+    window.Release();                                                       ///LIMPIAMOS LA MEMORIA USADA POR LAS TEXTURAS
 }
 
+void Game::Render(RendererWindow &renderer)
+{
+    SDL_RenderClear(renderer)
+    _backgroundTexture->render();
+    SDL_RenderCopy(renderer, _texture, &_srcRect, destRect);
+}
 
 

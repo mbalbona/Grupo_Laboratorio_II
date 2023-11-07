@@ -2,6 +2,8 @@
 
 using namespace std;
 
+class Texture;
+class RendererWindow;
 
 /**
 CLASE GAME
@@ -14,10 +16,13 @@ public:
     Game();
 
     void handleEvents();
+    void Render(RendererWindow &_renderer);
     void Run();
 
 
 private:
-    bool isRunning;   ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
+    bool _isRunning;   ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
+    Texture *_backgroundTexture;
+    RendererWindow *_window;
 };
 
