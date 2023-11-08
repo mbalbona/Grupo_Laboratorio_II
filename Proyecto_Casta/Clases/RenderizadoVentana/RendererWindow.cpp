@@ -3,13 +3,13 @@
 #include <SDL2/SDL_image.h>
 #include "RendererWindow.h"
 #include "Entidad.h"
-#define fps 120                                        ///#define es una directiva del preprocesador que permite definir constantes y macros.
+
 
 using namespace std;
 
 
 RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
-    : window(nullptr), renderer(nullptr)                    ///LISTA DE INICIALIZACION DE MIEMBROS:
+: window(nullptr)                        ///LISTA DE INICIALIZACION DE MIEMBROS:
                                                             ///PERMITE INICIALIZAR LOS MIEMBROS DE UNA CLASE EN EL CONSTRUCTOR DE LA CLASE.
                                                             ///LA LISTA DE INICIALIZACION DE MIEMBROS SE ESPECIFICA DESPUES DE LA LISTA DE PARAMETROS DEL CONSTRUCTOR,
                                                             ///Y ESTA COMPUESTA POR UNA LISTA DE INICIALIZADORES PARA LOS MIEMBROS DE LA CLASE, SEPARADOS POR COMAS.
@@ -18,63 +18,55 @@ RendererWindow::RendererWindow(const char *titulo, int largo, int ancho)
 
 
     window = SDL_CreateWindow(titulo,                       ///CREACION DE VENTANA
-                                SDL_WINDOWPOS_UNDEFINED,    ///Posicion de la ventana en eje X
-                                SDL_WINDOWPOS_UNDEFINED,    ///Posicion de la ventana en eje Y
-                                largo,                      ///Largo
-                                ancho,                      ///Ancho
-                                SDL_WINDOW_SHOWN            ///Comportamiento de la ventana
-                                );
+                              SDL_WINDOWPOS_UNDEFINED,      ///Posicion de la ventana en eje X
+                              SDL_WINDOWPOS_UNDEFINED,      ///Posicion de la ventana en eje Y
+                              largo,                        ///Largo
+                              ancho,                        ///Ancho
+                              SDL_WINDOW_SHOWN);            ///Comportamiento de la ventana
 
     if( window == nullptr ) cout << "LA VENTANA FALLO EN INICIALIZARSE! Error: " << SDL_GetError() <<endl;
 
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED); ///CREA EL RENDERIZADOR QUE UTILIZARA LA TARJETA GRAFICA QUE TENGA EL EQUIPO. EN CASO DE TENER.
-
-    if( renderer == nullptr ) cout << "EL RENDERIZADOR FALLO EN INICIALIZARSE! Error: " << SDL_GetError() <<endl;
 }
 
-SDL_Texture* RendererWindow::cargar_textura(const char *direccion_archivo)
+
+
+
+int RendererWindow::getRefreshRate()
 {
-    SDL_Texture *texture = nullptr;                                     ///INICIALIZAMOS LA VARIABLE EN NULA PARA PODER IDENTIFICAR FACILMENTE SI HUBO ALGUN FALLO AL CARGAR
-                                                                        ///LA IMAGEN
+  int displayIndex = SDL_GetWindowDisplayIndex(window);
 
-    texture = IMG_LoadTexture(renderer, direccion_archivo);             ///CARGAMOS LA TEXTURA Y LA COLOCAMOS DENTRO DE LA VARIABLE texture
+  SDL_DisplayMode modo;
 
-    if(texture == nullptr) cout << "FALLO EN CARGAR TEXTURA! ERROR: " << SDL_GetError() << endl;
+  SDL_GetDisplayMode(displayIndex, 0, &modo);
 
-    return texture;                                                     ///RETORNAMOS EL PUNTERO CONTENEDOR DE LA IMAGEN PARA TRABAJAR CON ELLA Y POSTERIORMENTE MOSTRARLA
+  // Verifica si la tasa de refresco es 0
+
+  if (modo.refresh_rate == 0) {
+    // Si es 0, devuelve -1
+    return -1;
+  }
+
+  // Devuelve la tasa de refresco
+
+  return modo.refresh_rate;
 }
 
 
-void RendererWindow::limpiar()
+void RendererWindow::Update(double elapsed_seconds, Entidad &entid)
+{
+    frame_index = int( ( (SDL_GetTicks() / 100) % 10) );
+
+    entid.getPos().setX(frame_index * 587);
+
+}
+
+
+
+void RendererWindow::Release()
 {
     SDL_DestroyWindow(window);
+    SDL_Quit();
 }
 
-void RendererWindow::vaciar()
-{
-    SDL_RenderClear(renderer);
-}
-
-void RendererWindow::renderizar(Entidad &entid)
-{
-    SDL_Rect src;
-    src.x = entid.getFrameActual().x;
-    src.y = entid.getFrameActual().y;
-    src.w = entid.getFrameActual().w;
-    src.h = entid.getFrameActual().h;
-
-    SDL_Rect dest;
-    dest.x = entid.getX() * 4;
-    dest.y = entid.getY() * 4;
-    dest.w = entid.getFrameActual().w * 4;
-    dest.h = entid.getFrameActual().h * 4;
-
-    SDL_RenderCopy(renderer, entid.getTextura(), nullptr, nullptr);
-}
-
-void RendererWindow::mostrar()
-{
-    SDL_RenderPresent(renderer);
-}
 
 

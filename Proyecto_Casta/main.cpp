@@ -1,6 +1,7 @@
 #include <iostream>
 #include "SDL.h"
 #include <SDL2/SDL_image.h>
+#include <vector>
 
 using namespace std;
 
@@ -20,11 +21,9 @@ del codigo fuente del actual programa.
 */
 int main(int argc, char* argv[])
 {
+    Game test;
 
-        Game test;
-
-        test.init();
-
+    test.Run();
 
 
     return EXIT_SUCCESS;
