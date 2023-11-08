@@ -2075,13 +2075,13 @@
 	"SDL.h"
 	<SDL2/SDL_image.h>
 
-1697081928 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.cpp
+1697167163 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.cpp
 	<iostream>
 	"Entidad.h"
 	"SDL.h"
 	<SDL2/SDL_image.h>
 
-1697081928 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
+1697167163 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\entidad\entidad.h
 	<iostream>
 	"Entidad.h"
 	"SDL.h"
@@ -2486,22 +2486,28 @@
 	"begin_code.h"
 	"close_code.h"
 
-1697089932 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+1697169186 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
+	"Entidad.h"
 	"Game.h"
 
-1697086712 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+1697167163 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.h
+	<iostream>
+	"SDL.h"
+	<SDL2/SDL_image.h>
+	"Entidad.h"
 
 1697081928 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
-1697086712 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
+1697167163 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"RendererWindow.h"
+	"Entidad.h"
 
 1697089886 source:c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
@@ -2516,9 +2522,11 @@
 	<iostream>
 	"personaje.h"
 
-1697089202 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
+1697684990 c:\users\pineda walter\desktop\lab2 proyecto\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
 	<iostream>
 	<string>
+	"SDL.h"
+	<SDL2/SDL_image.h>
 
 1697123395 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.cpp
 	<ctime>

@@ -21,10 +21,19 @@ void Game::init()
     SDL_Event event_handler;                                                ///DECLARAMOS MANAGER DE EVENTOS
 
     SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
-    SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
+
+
+
+/*-----------------------------------------------------------------------*/
+
+
+
+
+
+/*------------------------------------------------------------------------*/
 
     Entidad plataforma_nivel_1(100, 300, nivel_1);
-    Entidad jugador_1()
+
 
     bool estaAndando = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
 
@@ -38,6 +47,7 @@ void Game::init()
 
         window.vaciar();
         window.renderizar(plataforma_nivel_1);
+
         window.mostrar();
 
 
@@ -63,4 +73,28 @@ void Game::init()
     SDL_Quit();
 }
 
+/*-----------------------------------------------------------------------/
+/SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
+SDL_Renderer* renderer=NULL;
+ renderer = RendererWindow("test",-1,SDL_RENDERER_ACCELERATED);
+personajePrincipal=SDL_LoadBMP("Graficos/Personajes/MILEI/milei.png");
+SDL_Texture* tex=SDL_CreateTextureFromSurface(renderer,personajePrincipal);
+int x=0;
+int y=0;
+SDL_Rect rect={x,y,100,100};
 
+
+
+
+
+
+  Entidad jugadorprincipal (20,20,pj1);
+    Entidad jugador_1();
+
+
+
+ window.renderizar(jugadorprincipal);
+
+
+
+-------------------------------------------------------------------------*/
