@@ -1,27 +1,44 @@
 #include <iostream>
-#include <vector>
-#include <chrono>
+#include <string>
 #include <SDL2/SDL_image.h>
 #include "SDL.h"
 #include "Texture.h"
 
 using namespace std;
 
+///CONSTRUCTOR
 Texture::Texture(std::string path, SDL_Renderer *renderer):
-_path(path), _renderer(renderer), _texture(nullptr)
+_texture(nullptr)
 {
-}
-
-void Texture::Init()
-{
-    SDL_Surface *surface = IMG_Load(_path.c_str());
-    _texture = SDL_CreateTextureFromSurface(_renderer, surface);
-    SDL_QueryTexture(_texture, nullptr, nullptr, &_srcRect.w, &_srcRect.h);
+    SDL_Surface *surface = IMG_Load(path.c_str());
+    _texture = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
 }
 
-void Texture::render(const SDL_Rect* destRect) const
+
+Texture::~Texture()
 {
-    assert(_texture != nullptr && "No se inicializo correctamente la textura!");
-    SDL_RenderCopy(_renderer, _texture, &_srcRect, destRect);
+    SDL_DestroyTexture(_texture);
+}
+
+void Texture::setPosition(int x, int y)
+{
+    _rect.x = x;
+    _rect.y = y;
+}
+
+void Texture::setSize(int w, int h)
+{
+    _rect.w = w;
+    _rect.h = h;
+}
+
+
+void Texture::Update(SDL_Renderer*& renderer)
+{
+}
+
+void Texture::Render(SDL_Renderer*& renderer) const
+{
+    SDL_RenderCopy(renderer, _texture, nullptr , &_rect);
 }

@@ -6,14 +6,22 @@ using namespace std;
 class Texture
 {
     public:
+        ///Constructor y Destructor
         Texture(std::string path, SDL_Renderer *renderer);
+        ~Texture();
 
-        void Init();
-        void render(const SDL_Rect *destRect) const;
+        ///Setters
+        void setPosition(int x, int y);
+        void setSize(int w, int h);
+        ///Setters
+        int getPosX(){return _rect.x;}
+        int getPosY(){return _rect.y;}
+
+        ///Metodos
+        void Update(SDL_Renderer *&);
+        void Render(SDL_Renderer *&) const;
     private:
-        std::string _path;
-        SDL_Renderer *_renderer;
-        SDL_Rect _srcRect;
+        SDL_Rect _rect;
         SDL_Texture *_texture;
 };
 

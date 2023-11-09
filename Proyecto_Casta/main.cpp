@@ -5,8 +5,7 @@
 
 using namespace std;
 
-#include "Entidad.h"
-#include "RendererWindow.h"
+#include "Window.h"
 #include "Game.h"
 
 

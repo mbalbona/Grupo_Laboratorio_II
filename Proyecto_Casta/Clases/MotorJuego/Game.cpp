@@ -1,100 +1,95 @@
 #include <iostream>
 #include "SDL.h"
 #include <SDL2/SDL_image.h>
-#include "RendererWindow.h"
-#include "Entidad.h"
+#include "Window.h"
 #include "Game.h"
+#include "Texture.h"
 
 #define ancho_ventana 1280                              ///Constante es un valor que no puede cambiar durante la ejecución del programa.
 #define largo_ventana 720                               ///Macro es una sustitución de texto que se realiza antes de que el código sea compilado.
-
+#define fps 60                                          ///Definimos los fps en los que queremos que corra el programa
 
 using namespace std;
 
 
-void Game::init()
+
+Game::Game()
 {
+    _isRunning = true;
 
-    SDL_Init(SDL_INIT_EVERYTHING);                                          ///INICIAMOS SDL
-    RendererWindow window("test", ancho_ventana, largo_ventana);
-
-    SDL_Event event_handler;                                                ///DECLARAMOS MANAGER DE EVENTOS
-
-    SDL_Texture *nivel_1 = window.cargar_textura("Graficos/nivel_1.png");   ///BUSCAMOS LA IMAGEN QUE SE CARGARA
-
-
-
-/*-----------------------------------------------------------------------*/
-
-
-
-
-
-/*------------------------------------------------------------------------*/
-
-    Entidad plataforma_nivel_1(100, 300, nivel_1);
-
-
-    bool estaAndando = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
-
-    while(estaAndando){                                                     ///LOOP O CICLO PRINCIPAL
-
-        while(SDL_PollEvent(&event_handler)){
-
-            if(event_handler.type == SDL_QUIT) estaAndando = false;                             ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
-                                                                                                ///ESTE FINALIZARA
-        }
-
-        window.vaciar();
-        window.renderizar(plataforma_nivel_1);
-
-        window.mostrar();
-
-
+    if(SDL_Init(SDL_INIT_EVERYTHING) < 0){
+        cout << "HUBO UN ERROR: error " << SDL_GetError() << endl;
     }
-
-
-    bool estaAndandopj1 = true;                                                ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
-
-    /*while(estaAndandopj1){                                                     ///LOOP O CICLO PRINCIPAL
-
-        while(SDL_PollEvent(&event_handler)){
-
-            if(event_handler.type == SDL_QUIT) estaAndandopj1 = false;                             ///SI EL MANAGER DE EVENTOS DETECTA QUE SALE DEL PROGRAMA
-                                                                                                ///ESTE FINALIZARA
-        }
-        window.vaciar();
-        window.renderizar(pj1);
-        window.mostrar();
-    }
-        */
-
-    window.limpiar();
-    SDL_Quit();
 }
 
-/*-----------------------------------------------------------------------/
-/SDL_Texture *pj1=window.cargar_textura("Graficos/Personajes/MILEI/milei.png" );
-SDL_Renderer* renderer=NULL;
- renderer = RendererWindow("test",-1,SDL_RENDERER_ACCELERATED);
-personajePrincipal=SDL_LoadBMP("Graficos/Personajes/MILEI/milei.png");
-SDL_Texture* tex=SDL_CreateTextureFromSurface(renderer,personajePrincipal);
-int x=0;
-int y=0;
-SDL_Rect rect={x,y,100,100};
+void Game::HandleEvent(SDL_Event event)
+{
+    switch(event.type){
+                case SDL_QUIT:
+                    _isRunning = false;
 
+                case SDL_KEYDOWN:
+                    if(event.key.keysym.sym == SDLK_w){
+                        cout << "W PRESIONADA" << endl;
+                    }
+                    if(event.key.keysym.sym == SDLK_a){
+                        cout << "A PRESIONADA" << endl;
+                    }
+                    if(event.key.keysym.sym == SDLK_s){
+                        cout << "S PRESIONADA" << endl;
+                    }
+                    if(event.key.keysym.sym == SDLK_d){
+                        cout << "D PRESIONADA" << endl;
+                    }
+                    if(event.key.keysym.sym == SDLK_SPACE){
+                        cout << "ESPACIO PRESIONADO" << endl;
+                    }
+                    if(event.key.keysym.sym == SDLK_ESCAPE){
+                        _isRunning = false;
+                    }
 
+            }
+}
 
+void Game::limitFrames(int frames, int last)
+{
+    int current_frame = SDL_GetTicks();
+    int timer = current_frame - last;
+    if(timer < (100 / fps) )
+    {
+        SDL_Delay(( 1000/fps ) - timer);
+    }
 
+    last = current_frame;
 
+    cout << last << endl;
+}
 
-  Entidad jugadorprincipal (20,20,pj1);
-    Entidad jugador_1();
+void Game::Run()
+{
+    SDL_Window *window = SDL_CreateWindow("test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_SHOWN);
 
+    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
+    Texture _pjPrincipal("./Graficos/Personajes/Mileipj/mileparadosprite.png", renderer);
 
- window.renderizar(jugadorprincipal);
+    int last_frame = SDL_GetTicks();
 
+    while(_isRunning){
 
+        limitFrames(fps, last_frame);
 
--------------------------------------------------------------------------*/
+        SDL_Event event;
+        while(SDL_PollEvent(&event)){
+            HandleEvent(event);
+        }
+        _pjPrincipal.setPosition(50, 100);
+        _pjPrincipal.setSize(800, 800);
+        _pjPrincipal.Render(renderer);
+
+        SDL_RenderPresent(renderer);
+    }
+
+    SDL_DestroyWindow(window);
+}
+

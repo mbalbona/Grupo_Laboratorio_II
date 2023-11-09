@@ -3,7 +3,6 @@
 using namespace std;
 
 class Texture;
-class RendererWindow;
 
 /**
 CLASE GAME
@@ -14,15 +13,13 @@ class Game
 {
 public:
     Game();
-
-    void handleEvents();
-    void Render(RendererWindow &_renderer);
+    void HandleEvent(SDL_Event);
+    void limitFrames(int, int);
     void Run();
 
 
 private:
     bool _isRunning;   ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
-    Texture *_backgroundTexture;
-    RendererWindow *_window;
+    SDL_Renderer *_renderer;
 };
 

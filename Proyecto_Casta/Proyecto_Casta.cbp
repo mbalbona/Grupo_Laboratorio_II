@@ -61,16 +61,12 @@
 			<Add directory="SDL2/lib" />
 			<Add directory="SDL2/Imagen/lib" />
 		</Linker>
-		<Unit filename="Clases/Calculos/Calculos.cpp" />
-		<Unit filename="Clases/Calculos/Calculos.h" />
-		<Unit filename="Clases/Entidad/Entidad.cpp" />
-		<Unit filename="Clases/Entidad/Entidad.h" />
 		<Unit filename="Clases/MotorJuego/Game.cpp" />
 		<Unit filename="Clases/MotorJuego/Game.h" />
 		<Unit filename="Clases/Personaje/personaje.cpp" />
 		<Unit filename="Clases/Personaje/personaje.h" />
-		<Unit filename="Clases/RenderizadoVentana/RendererWindow.cpp" />
-		<Unit filename="Clases/RenderizadoVentana/RendererWindow.h" />
+		<Unit filename="Clases/RenderizadoVentana/Window.cpp" />
+		<Unit filename="Clases/RenderizadoVentana/Window.h" />
 		<Unit filename="Clases/Texturas/Texture.cpp" />
 		<Unit filename="Clases/Texturas/Texture.h" />
 		<Unit filename="main.cpp" />
