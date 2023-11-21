@@ -7,11 +7,22 @@
 using namespace std;
 
 ///CONSTRUCTOR
-Texture::Texture(std::string path, SDL_Renderer *renderer):
+Texture::Texture(std::string path, SDL_Renderer *renderer, int x, int y, int w, int h):
 _texture(nullptr)
 {
     SDL_Surface *surface = IMG_Load(path.c_str());
     _texture = SDL_CreateTextureFromSurface(renderer, surface);
+
+    _srcRect.x = 0;
+    _srcRect.y = 0;
+    _srcRect.w = 29;
+    _srcRect.h = 40;
+
+    _destRect.x = 0;
+    _destRect.y = 0;
+    _destRect.w = 160;
+    _destRect.h = 160;
+
     SDL_FreeSurface(surface);
 }
 
@@ -21,24 +32,20 @@ Texture::~Texture()
     SDL_DestroyTexture(_texture);
 }
 
-void Texture::setPosition(int x, int y)
-{
-    _rect.x = x;
-    _rect.y = y;
-}
-
-void Texture::setSize(int w, int h)
-{
-    _rect.w = w;
-    _rect.h = h;
-}
 
 
-void Texture::Update(SDL_Renderer*& renderer)
+
+void Texture::Update(SDL_Renderer* renderer)
 {
 }
 
-void Texture::Render(SDL_Renderer*& renderer) const
+void Texture::Render(SDL_Renderer* renderer) const
 {
-    SDL_RenderCopy(renderer, _texture, nullptr , &_rect);
+    SDL_RenderCopy(renderer, _texture, &_srcRect , &_destRect);
 }
+
+void Texture::Show(SDL_Renderer* renderer)
+{
+    SDL_RenderPresent(renderer);
+}
+

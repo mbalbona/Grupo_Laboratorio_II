@@ -1209,14 +1209,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1698257375 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+1700594081 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
 	<iostream>
-	<vector>
-	<SDL2/SDL_image.h>
 	"SDL.h"
-	"RendererWindow.h"
-	"Entidad.h"
+	<SDL2/SDL_image.h>
+	"Window.h"
 	"Game.h"
+	"Texture.h"
 
 1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -1611,15 +1610,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1699379464 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
+1700592159 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
-1698845905 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+1700592159 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	<vector>
-	"Entidad.h"
-	"RendererWindow.h"
+	"Window.h"
 	"Game.h"
 
 1698334121 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\rendererwindow.cpp
@@ -2549,9 +2547,11 @@
 	<iostream>
 	"personaje.h"
 
-1698073008 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
+1700592159 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
 	<iostream>
 	<string>
+	"SDL.h"
+	<SDL2/SDL_image.h>
 
 1675730672 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\imagen\include\sdl2\sdl_image.h
 	"SDL.h"
@@ -3068,4 +3068,20 @@
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"Window.h"
+
+1700592159 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\window.h
+
+1700594081 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\texturas\texture.h
+
+1700592159 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\window.cpp
+	"SDL.h"
+	<SDL2/SDL_image.h>
+	"Window.h"
+
+1700593703 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\texturas\texture.cpp
+	<iostream>
+	<string>
+	<SDL2/SDL_image.h>
+	"SDL.h"
+	"Texture.h"
 

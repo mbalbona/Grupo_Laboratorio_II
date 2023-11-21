@@ -67,27 +67,28 @@ void Game::limitFrames(int frames, int last)
 
 void Game::Run()
 {
-    SDL_Window *window = SDL_CreateWindow("test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_SHOWN);
+    SDL_Window *window = SDL_CreateWindow("test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 400, SDL_WINDOW_SHOWN);
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-    Texture _pjPrincipal("./Graficos/Personajes/Mileipj/mileparadosprite.png", renderer);
+    Texture _pjPrincipal("./Graficos/Personajes/Mileipj/mileparadosprite.png", renderer, 29, 160, 400, 400);
 
     int last_frame = SDL_GetTicks();
+
+    int frame_index = 0;
 
     while(_isRunning){
 
         limitFrames(fps, last_frame);
 
         SDL_Event event;
+
         while(SDL_PollEvent(&event)){
             HandleEvent(event);
         }
-        _pjPrincipal.setPosition(50, 100);
-        _pjPrincipal.setSize(800, 800);
-        _pjPrincipal.Render(renderer);
 
-        SDL_RenderPresent(renderer);
+        _pjPrincipal.Render(renderer);
+        _pjPrincipal.Show(renderer);
     }
 
     SDL_DestroyWindow(window);

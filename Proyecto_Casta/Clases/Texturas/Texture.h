@@ -7,21 +7,16 @@ class Texture
 {
     public:
         ///Constructor y Destructor
-        Texture(std::string path, SDL_Renderer *renderer);
+        Texture(std::string path, SDL_Renderer *renderer, int x, int y, int w, int h);
         ~Texture();
 
-        ///Setters
-        void setPosition(int x, int y);
-        void setSize(int w, int h);
-        ///Setters
-        int getPosX(){return _rect.x;}
-        int getPosY(){return _rect.y;}
-
         ///Metodos
-        void Update(SDL_Renderer *&);
-        void Render(SDL_Renderer *&) const;
+        void Update(SDL_Renderer *);
+        void Render(SDL_Renderer *) const;
+        void Show(SDL_Renderer *);
     private:
-        SDL_Rect _rect;
+        SDL_Rect _srcRect;
+        SDL_Rect _destRect;
         SDL_Texture *_texture;
 };
 
