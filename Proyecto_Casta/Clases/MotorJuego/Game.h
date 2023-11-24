@@ -13,6 +13,7 @@ class Game
 {
 public:
     Game();
+
     void HandleEvent(SDL_Event);
     void limitFrames(int, int);
     void Run();
