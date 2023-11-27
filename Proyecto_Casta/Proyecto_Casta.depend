@@ -1209,7 +1209,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1700844646 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
+1700594081 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
@@ -1217,7 +1217,7 @@
 	"Game.h"
 	"Texture.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -1255,12 +1255,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_main.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_stdinc.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -1292,29 +1292,29 @@
 	<stdio.h>
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_config.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 	<sdkddkver.h>
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_platform.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_platform.h
 	<AvailabilityMacros.h>
 	<TargetConditionals.h>
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\begin_code.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\begin_code.h
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\close_code.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\close_code.h
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_assert.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_assert.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_atomic.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -1322,7 +1322,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_audio.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -1332,12 +1332,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_error.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_endian.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<endian.h>
@@ -1346,13 +1346,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_mutex.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_thread.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -1363,18 +1363,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_rwops.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_clipboard.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_cpuinfo.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -1396,7 +1396,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_events.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -1410,7 +1410,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_video.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1418,13 +1418,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_pixels.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_rect.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -1432,7 +1432,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_surface.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1441,11 +1441,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_blendmode.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_keyboard.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -1453,21 +1453,21 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_keycode.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_scancode.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_mouse.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_joystick.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_guid.h"
@@ -1475,13 +1475,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_guid.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_guid.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_gamecontroller.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -1490,17 +1490,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_sensor.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_quit.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_gesture.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -1508,70 +1508,70 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_touch.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_filesystem.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_haptic.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_hidapi.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_hidapi.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_hints.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_loadso.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_log.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_messagebox.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_metal.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_metal.h
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_power.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_render.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_shape.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -1580,7 +1580,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_system.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -1588,31 +1588,31 @@
 	"begin_code.h"
 	"close_code.h"
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_timer.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596459 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_version.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_locale.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_locale.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1696596458 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_misc.h
+1697034415 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\include\sdl2\sdl_misc.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1700844606 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
+1700592159 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\motorjuego\game.h
 
-1700834243 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
+1700592159 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\main.cpp
 	<iostream>
 	"SDL.h"
 	<SDL2/SDL_image.h>
@@ -2542,20 +2542,18 @@
 	"SDL.h"
 	<SDL2/SDL_image.h>
 
-1700843611 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.cpp
+1698073008 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.cpp
 	<ctime>
 	<iostream>
 	"personaje.h"
-	"Texture.h"
 
-1700843611 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
+1700592159 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\personaje\personaje.h
 	<iostream>
 	<string>
 	"SDL.h"
 	<SDL2/SDL_image.h>
-	"Texture.h"
 
-1697123395 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\imagen\include\sdl2\sdl_image.h
+1675730672 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\sdl2\imagen\include\sdl2\sdl_image.h
 	"SDL.h"
 	"SDL_version.h"
 	"begin_code.h"
@@ -3071,16 +3069,16 @@
 	<SDL2/SDL_image.h>
 	"Window.h"
 
-1700834241 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\window.h
+1700592159 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\window.h
 
-1700840902 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\texturas\texture.h
+1700594081 c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\texturas\texture.h
 
-1700834241 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\window.cpp
+1700592159 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\renderizadoventana\window.cpp
 	"SDL.h"
 	<SDL2/SDL_image.h>
 	"Window.h"
 
-1700844646 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\texturas\texture.cpp
+1700593703 source:c:\users\ce43625513\desktop\grupo_laboratorio_ii_wam\proyecto_casta\clases\texturas\texture.cpp
 	<iostream>
 	<string>
 	<SDL2/SDL_image.h>
