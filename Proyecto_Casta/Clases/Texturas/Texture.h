@@ -15,8 +15,8 @@ class Texture
         void Render(SDL_Renderer *) const;
 
         ///GETTERS
-        SDL_Rect getDestRect_X(){return _destRect.x;}
-        SDL_Rect getDestRect_Y(){return _destRect.x;}
+        int getDestRect_X(){return _destRect.x;}
+        int getDestRect_Y(){return _destRect.y;}
 
     private:
         SDL_Rect _srcRect;
@@ -26,3 +26,4 @@ class Texture
 };
 
 #endif // TEXTURE_H
+

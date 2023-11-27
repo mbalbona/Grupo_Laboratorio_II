@@ -19,6 +19,8 @@ public:
 
     private:
     std::string _nombre;
+    int _posX;
+    int _posY;
 
 };
 
