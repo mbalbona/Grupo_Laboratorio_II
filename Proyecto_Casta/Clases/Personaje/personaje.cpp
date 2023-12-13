@@ -5,14 +5,14 @@
 
 
 
-void Personaje::mover(int deltaX, int deltaY) {
+/*void Personaje::mover(int deltaX, int deltaY) {
     _posX += deltaX;
     _posY += deltaY;
-}
+}*/
 
 
-void Personaje::mostrarInfo() {
+/*void Personaje::mostrarInfo() {
     std::cout << "Nombre: " << _nombre << ", Posición: (" << _posX << ", " << _posY << ")\n";
-}
+}*/
 
 

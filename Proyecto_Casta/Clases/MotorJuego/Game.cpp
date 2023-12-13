@@ -7,7 +7,7 @@
 
 #define ancho_ventana 1280                              ///Constante es un valor que no puede cambiar durante la ejecución del programa.
 #define largo_ventana 720                               ///Macro es una sustitución de texto que se realiza antes de que el código sea compilado.
-#define fps 60                                          ///Definimos los fps en los que queremos que corra el programa
+#define fps 20                                          ///Definimos los fps en los que queremos que corra el programa
 
 using namespace std;
 
@@ -63,7 +63,6 @@ void Game::limitFrames(int frames, int last)
     last = current_frame;
 
     cout << last << endl;
-    system("cls");
 }
 
 
@@ -80,18 +79,22 @@ void Game::Run()
 
     while(_isRunning){
 
+        limitFrames(fps, last_frame);
+
         SDL_Event event;
 
         while(SDL_PollEvent(&event)){
             HandleEvent(event);
         }
 
-        limitFrames(fps, last_frame);
+
 
         _nivel1.Render(renderer);
 
         _pjPrincipal.Render(renderer);
         _pjPrincipal.Update(renderer);
+
+
 
     }
 
