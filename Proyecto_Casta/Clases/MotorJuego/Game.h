@@ -13,7 +13,7 @@ class Game
 {
 public:
     Game();
-
+  void HandlePlayerMovement(SDL_Event event);
     void HandleEvent(SDL_Event);
     void limitFrames(int, int);
     void Run();
@@ -22,5 +22,8 @@ public:
 private:
     bool _isRunning;   ///BOOLEANO PARA DETERMINAR QUE ESTA TODO FUNCIONANDO HASTA ESE PUNTO
     SDL_Renderer *_renderer;
+     int _playerX; // Nueva variable para la posición x del jugador principal
+    int _playerY; // Nueva variable para la posición y del jugador principal
+
 };
 

@@ -58,4 +58,7 @@ void Texture::Render(SDL_Renderer* renderer) const
     SDL_RenderPresent(renderer);
 }
 
-
+void Texture::SetPosition(int x, int y) {
+    _destRect.x = x;
+    _destRect.y = y;
+}

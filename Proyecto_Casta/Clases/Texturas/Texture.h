@@ -13,7 +13,7 @@ class Texture
         ///Metodos
         void Update(SDL_Renderer *);
         void Render(SDL_Renderer *) const;
-
+    void SetPosition(int x, int y);
         ///GETTERS
         int getDestRect_X(){return _destRect.x;}
         int getDestRect_Y(){return _destRect.x;}
